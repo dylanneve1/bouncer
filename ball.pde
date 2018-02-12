@@ -11,6 +11,7 @@ class Ball
     show();
     bounce();
     gravity();
+    move();
   }
 
   void show()
@@ -21,15 +22,33 @@ class Ball
 
   void gravity()
   {
-    ySpeed = ySpeed + 0.1;
+    if (y < 750)
+    {
+      ySpeed = ySpeed + 0.1;
+    }
   }
 
   void bounce()
   {
     y = y + ySpeed;
-    
-    if(y >= 750){
+
+    if (y >= 750) {
       ySpeed = ySpeed * -1;
+    }
+  }
+
+  void move()
+  {
+    if (keyPressed == true)
+    {
+      if (key == 'd')
+      {
+        x = x + 4;
+      }
+      if (key == 'a')
+      {
+        x = x -4;
+      }
     }
   }
 }
