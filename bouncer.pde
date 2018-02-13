@@ -31,5 +31,4 @@ void draw()
     rain[i].show();
   }
   scenes.caller();
-  rect(0, 750, 600, 50);
 }

@@ -12,6 +12,7 @@ class Ball
     bounce();
     gravity();
     move();
+    //reset();
   }
 
   void show()
