@@ -2,9 +2,9 @@ class Ball
 {
 
   float x = 300;
-  float y = 750;
+  float y = 700;
 
-  float ySpeed = - 10;
+  float ySpeed = - 25;
 
   void caller()
   {
@@ -22,9 +22,9 @@ class Ball
 
   void gravity()
   {
-    if (y < 750)
+    if (y < 700)
     {
-      ySpeed = ySpeed + 0.1;
+      ySpeed = ySpeed + 1;
     }
   }
 
@@ -32,7 +32,7 @@ class Ball
   {
     y = y + ySpeed;
 
-    if (y >= 750) {
+    if (y >= 700) {
       ySpeed = ySpeed * -1;
     }
   }
